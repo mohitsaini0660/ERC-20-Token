@@ -1,4 +1,4 @@
-# 🚀 Advanced ERC-20 Token (ATK)
+# 🚀 EquationToken (EQT)
 
 ![ERC-20 Token](https://img.shields.io/badge/ERC--20-Token-blue.svg)
 ![Solidity](https://img.shields.io/badge/Solidity-%5E0.8.19-black.svg)
