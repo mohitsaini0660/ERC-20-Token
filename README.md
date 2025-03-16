@@ -1,66 +1,29 @@
-## Foundry
+# 🚀 Advanced ERC-20 Token (ATK)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+![ERC-20 Token](https://img.shields.io/badge/ERC--20-Token-blue.svg)
+![Solidity](https://img.shields.io/badge/Solidity-%5E0.8.19-black.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
 
-Foundry consists of:
+An **advanced ERC-20 token** with modern features like staking, taxation, blacklist functionality, and governance. Built using **Solidity** and deployable on **Ethereum-compatible blockchains**. 🔥  
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+---
 
-## Documentation
+## 🌟 **Features**
+✅ **Minting & Burning** – Controlled by the owner.  
+✅ **Tax on Transfers** – A small percentage goes to a treasury wallet.  
+✅ **Staking Mechanism** – Earn rewards for staking tokens.  
+✅ **Blacklist Functionality** – Block malicious addresses.  
+✅ **DAO Governance Ready** – Token holders can vote on decisions.  
+✅ **Security** – Follows best practices to prevent exploits.  
 
-https://book.getfoundry.sh/
+---
 
-## Usage
+## 📜 **Smart Contract Overview**
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
 
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+contract AdvancedToken {
+    // ERC-20 logic, staking, tax system, and governance here.
+}
