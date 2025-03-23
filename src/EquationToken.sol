@@ -9,6 +9,7 @@ contract EquationToken {
     uint8 public decimals = 18;
     uint256 public feePercentage = 2;
     address public treasuryWallet;
+    address public owner;
     uint256 public stakingRewardRate = 10;
 
     mapping(address => uint256) public balanceOf;
@@ -34,15 +35,13 @@ contract EquationToken {
     event Unstaked(address indexed account, uint256 amount);
 
     modifier onlyOwner() {
-        require(
-            msg.sender == treasuryWallet,
-            "Only owner can call this function"
-        );
+        require(msg.sender == owner, "Only owner can call this function");
         _;
     }
 
     constructor(address _treasuryWallet) {
         treasuryWallet = _treasuryWallet;
+        owner = msg.sender;
     }
 
     function transfer(address to, uint256 amount) public returns (bool) {
