@@ -27,7 +27,7 @@ contract EquationTokenTest is Test {
         token._mint(user1, 1000 ether);
         vm.prank(owner);
         token._burn(500 ether);
-        assertEq(token.totalSupply(), 500 ether);
+        assertEq(token.totalSupply(), 100500 ether);
     }
 
     function testTransfer() public {
@@ -80,5 +80,9 @@ contract EquationTokenTest is Test {
         vm.prank(user1);
         token.unstake();
         assertEq(token.balanceOf(user1), 1010 ether);
+    }
+
+    function testInitialSupply() public {
+        assertEq(token.totalSupply(), 100000 ether);
     }
 }

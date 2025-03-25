@@ -52,6 +52,10 @@ contract EquationToken is IEquationERC20 {
                 address(this)
             )
         );
+
+        // Mint initial  supply of 100000 EQT token to the owner
+        uint256 initialSupply = 100000 * 10 ** 18;
+        _mint(owner, initialSupply);
     }
 
     function _mint(address to, uint256 amount) public onlyOwner {
